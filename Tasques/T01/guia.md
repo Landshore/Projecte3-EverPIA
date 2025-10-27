@@ -1,128 +1,208 @@
-# Tasca 01: Gestor de Contrasenyes
-
-## Breu Descripció
-
-**⚠️ ALERTA!!** EverPia ha estat atacada per ciberdelinqüents. La consultora on esteu de becaris ha patit una fuita d'informació (data breach) i informació confidencial sobre un projecte que està en fase de desenvolupament està ara en mans de delinqüents que amenacen amb publicar-la si no es paga un rescat.
-
-Òbviament, això ha causat una gran alarma dins la companyia i s'ha creat un comitè de crisi per gestionar la situació.
-
-La investigació interna ha revelat que un dels comptes tècnics va ser compromès a causa de l'ús d'una contrasenya feble o reutilitzada.
-
-## Resposta de la Direcció Tècnica
-
-Com a resposta a aquesta crisi, la Direcció Tècnica ha emès una directriu: tot el personal tècnic ha de començar a utilitzar un gestor de contrasenyes validat per garantir l'ús de credencials úniques i robustes.
-
-**La vostra tasca:** Avaluar les opcions i crear la documentació necessària per a la formació del personal.
+# Guia d'Ús Tècnica: Bitwarden
+## Manual Operatiu per a l'Equip Tècnic d'EverPia
 
 ---
 
-## Fase 1: Anàlisi i Justificació (Document d'Informe)
+## 1. Instal·lació i Configuració Inicial
 
-Heu de redactar un informe que justifiqui tècnicament la decisió de la Direcció i comparin les opcions. Aquest informe ha d'incloure:
+### 1.1. Registre i Creació del Compte
 
-### 1. Introducció i Justificació
+**Pas 1:** Entrem a la pàgina oficial de Bitwarden i seleccionem "Registrar".
 
-- Explicació de per què les contrasenyes febles o reutilitzades són un risc crític per a l'empresa (atac de diccionari, credential stuffing, etc.)
-- La funció crucial d'un gestor de contrasenyes per mitigar aquests riscos
+![Pàgina principal de Bitwarden](img/image_0.png)
 
-### 2. Comparativa Tècnica
+**Pas 2:** Introduïm el nostre correu electrònic.
 
-Realitzeu una taula comparativa detallada entre:
+![Introducció del correu electrònic](img/image_1.png)
 
-#### Bitwarden (Alternativa Online / Núvol)
-Analitzeu:
-- La sincronització
-- El model de seguretat (xifratge end-to-end)
-- La facilitat d'accés des de múltiples dispositius
-- El cost/model freemium
+**Pas 3:** El sistema ens notificarà que hem de verificar el correu electrònic.
 
-#### KeePassX / KeePassXC (Alternativa Offline / Escriptori)
-Analitzeu:
-- L'emmagatzematge local de l'arxiu (KDBX)
-- La independència del núvol
-- El model open source
-- La portabilitat de l'arxiu
+![Notificació de verificació](img/image_2.png)
 
-### 3. Avantatges i Inconvenients
+**Pas 4:** Creem el nostre compte seguint les instruccions rebudes al correu.
 
-Resumiu els principals pros i contres de cada model (online vs. offline) des del punt de vista de:
-- Seguretat
-- Usabilitat
-- Continuïtat del negoci
-
-### 4. Recomanació
-
-Concloeu l'informe escollint l'eina que considereu més adequada per al personal tècnic de l'empresa i justifiqueu la vostra elecció.
+![Creació del compte](img/image_3.png)
 
 ---
 
-## Fase 2: Guia d'Ús Tècnica (Manual Operatiu)
+## 2. Generació de Contrasenyes Segures
 
-Utilitzant l'eina que heu seleccionat a la Fase 1 (Bitwarden, KeePassX, o similar), heu de crear una Guia d'Ús per a l'Equip Tècnic. Aquesta guia ha de ser clara i basada en captures de pantalla i instruccions pas a pas.
+### 2.1. Accés al Generador de Contrasenyes
 
-### Punts Obligatoris
+Bitwarden incorpora un generador de contrasenyes que permet crear credencials segures de forma automàtica.
 
-#### 1. Instal·lació i Configuració Inicial
-- Descàrrega
-- Instal·lació
-- Creació de la BBDD principal o compte mestre
+![Generador de contrasenyes](img/image_4.png)
 
-#### 2. Generació de Contrasenyes Segures
-- Explicació de com utilitzar el generador de contrasenyes de l'eina
-- Paràmetres: longitud, caràcters especials
+**Funcions disponibles:**
+- Generar contrasenyes
+- Generar frases de pas
+- Generar noms d'usuari
+- Historial de contrasenyes generades
 
-#### 3. Exemples d'Ús i Emplenament Automàtic
-- Com desar una credencial d'un compte de correu electrònic
-- Com desar una credencial d'una aplicació o servei web
-- Com fer servir l'extensió del navegador per emplenar automàticament les dades
+### 2.2. Configuració de Paràmetres de Seguretat
 
-#### 4. Gestió de Còpies de Seguretat (Backup)
-- Explicació detallada de com fer una còpia de seguretat de l'arxiu de contrasenyes (KDBX en KeePass o Exportació en Bitwarden)
-- Recomanació de la millor pràctica per emmagatzemar aquesta còpia de seguretat de forma segura (clau USB xifrada o emmagatzematge xifrat al núvol)
+Es recomana configurar les contrasenyes amb els següents paràmetres:
 
----
+![Configuració de paràmetres](img/image_5.png)
 
-## Què Caldrà Lliurar?
-
-**⚠️ Es tracta d'una tasca individual**
-
-Dins el repositori del `projecte-3` heu de crear una carpeta anomenada `tasca01`, dins d'ella heu de tenir:
-
-### Estructura de Fitxers
-```
-tasca01/
-├── README.md          # Descripció de la tasca i enllaços als arxius
-├── informe.md         # Informe corresponent a la Fase 1
-├── guia.md            # Guia d'ús corresponent a la Fase 2
-└── img/               # Carpeta amb les imatges de la guia
-    ├── imatge01.png
-    ├── imatge02.png
-    └── ...
-```
-
-### Arxius Requerits
-
-- **README.md**: Descripció de la tasca i enllaços als arxius de l'informe i la guia
-- **informe.md**: Document d'informe (Fase 1)
-- **guia.md**: Manual operatiu (Fase 2)
-- **img/**: Carpeta específica amb les imatges que inclogui la guia
-
-> ⚠️ **Important:** Les imatges que inclogui la guia han d'estar a dins una carpeta específica (img, pics, etc.)
+**Opcions recomanades:**
+- ✅ Lletres majúscules (A-Z)
+- ✅ Lletres minúscules (a-z)
+- ✅ Números (0-9)
+- ✅ Caràcters especials (!@#$%^&*)
+- **Longitud mínima:** 12-16 caràcters
 
 ---
 
-## Materials i Links de Suport
+## 3. Instal·lació de l'Extensió del Navegador
 
-- [INCIBE: Gestión de contraseñas seguras](https://www.incibe.es/)
-- [Pàgina oficial de Bitwarden](https://bitwarden.com/)
-- [Pàgina oficial de KeePassXC](https://keepassxc.org/)
-- [INCIBE: Gestores de contraseñas: qué son y cómo pueden mejorar la seguridad de las empresas](https://www.incibe.es/)
+### 3.1. Descàrrega i Configuració
+
+**Pas 7:** Instal·lem l'extensió de Bitwarden al navegador i l'obrim. Introduïm el correu i la contrasenya que vam utilitzar en crear el compte.
+
+![Instal·lació de l'extensió](img/image_6.png)
 
 ---
 
-## Resum de les Fases
+## 4. Exemples d'Ús i Emplenament Automàtic
 
-| Fase | Lliurable | Contingut |
-|------|-----------|-----------|
-| **Fase 1** | `informe.md` | Anàlisi tècnica, comparativa i recomanació |
-| **Fase 2** | `guia.md` | Manual operatiu amb captures de pantalla |
+### 4.1. Crear un Nou Compte amb Bitwarden
+
+**Pas 8:** Per crear un compte nou utilitzant Bitwarden, accedim al lloc web o aplicació desitjada.
+
+![Creació de compte nou](img/image_7.png)
+
+**Pas 9:** Obrim l'extensió i anem a l'apartat "Generador". Podem copiar la contrasenya o generar-ne una nova tantes vegades com vulguem.
+
+![Ús del generador](img/image_8.png)
+
+**Pas 10:** De manera automàtica, l'aplicació/extensió crearà i omplirà automàticament els credencials de connexió. També podem posar-la en un fitxer si volem. Després cliquem "Guardar".
+
+![Emplenament automàtic](img/image_9.png)
+
+### 4.2. Ajustar la Contrasenya segons Requisits
+
+**Pas 11:** Si la contrasenya no compleix els requisits del servei (per exemple, necessita 8 caràcters sense espais i incloure un número, una lletra majúscula i una minúscula):
+
+![Error de requisits](img/image_10.png)
+
+Anem a "Generador" i marquem almenys aquestes opcions:
+- **A-Z** (majúscules)
+- **a-z** (minúscules)
+- **0-9** (números)
+- **Símbols** (opcional)
+
+![Configuració ajustada](img/image_11.png)
+
+### 4.3. Generador de Noms d'Usuari
+
+**Pas 12:** Addicionalment, Bitwarden ofereix un generador de noms d'usuari. Es troba al mateix apartat del generador de contrasenyes (sub-apartat).
+
+![Generador de noms d'usuari](img/image_12.png)
+
+---
+
+## 5. Gestió de Credencials a la Caixa Forta
+
+### 5.1. Editar i Eliminar Credencials
+
+**Pas 13:** A la "Caixa Forta", cliquem sobre la icona del lloc web/aplicació. Estarem a l'espai dels credencials d'aquella aplicació/web. Podem:
+- Clicar sobre la icona de la paperera per eliminar de manera ràpida
+- Modificar les credencials
+
+![Gestió de credencials](img/image_13.png)
+
+![Opcions de gestió](img/image_14.png)
+
+![Detall de credencials](img/image_15.png)
+
+---
+
+## 6. Funció d'Emplenament Automàtic (Auto-Fill)
+
+### 6.1. Activar Auto-Fill
+
+**Pas 14:** Bitwarden permet utilitzar la funció "Auto-Fill", que omple de forma automàtica les dades de credencials. Cliquem sobre els tres punts i la funció apareixerà.
+
+![Funció Auto-Fill](img/image_16.png)
+
+**Pas 15:** Quan accedim a un lloc web, Bitwarden detectarà automàticament els camps de credencials i ens oferirà emplenar-los.
+
+![Auto-Fill en ús](img/image_17.png)
+
+![Credencials emplenades](img/image_18.png)
+
+---
+
+## 7. Gestió de Còpies de Seguretat (Backup)
+
+### 7.1. Exportar la Caixa Forta
+
+És fonamental realitzar còpies de seguretat periòdiques de les nostres contrasenyes.
+
+**Pas 1:** Anem a "Configuració".
+
+![Menú de configuració](img/image_19.png)
+
+**Pas 2:** Seleccionem "Opcions de la caixa forta".
+
+![Opcions de la caixa forta](img/image_20.png)
+
+**Pas 3:** Cliquem a "Exporta caixa forta". Podem triar exportar en format **.json** o **.csv**.
+
+![Exportar caixa forta](img/image_21.png)
+
+**Pas 4:** El sistema demanarà la contrasenya mestra per confirmar l'operació.
+
+![Confirmació de contrasenya](img/image_22.png)
+
+**Pas 5:** El fitxer quedarà desat al nostre dispositiu.
+
+![Fitxer exportat](img/image_23.png)
+
+---
+
+## 8. Bones Pràctiques per a Còpies de Seguretat
+
+### 8.1. Recomanacions de Seguretat
+
+✅ **Freqüència de còpies:**
+- Fes una còpia nova cada 3-6 mesos
+- Esborra les còpies antigues després de verificar les noves
+
+✅ **Emmagatzematge segur:**
+- **Opció 1:** Clau USB xifrada (recomanat per a màxima seguretat)
+- **Opció 2:** Servei de núvol amb xifratge (Nextcloud, Tresorit, etc.)
+- **MAI guardar còpies sense xifrar en ubicacions accessibles**
+
+✅ **Verificació:**
+- Comprova que el fitxer s'obre correctament abans de tancar la sessió
+- Assegura't que les dades exportades són completes i llegibles
+
+⚠️ **IMPORTANT:** Les còpies de seguretat contenen totes les contrasenyes en text xifrat o pla (segons el format). Mantingues-les sempre protegides.
+
+---
+
+## Resum de Funcions Principals
+
+| Funció | Descripció |
+|--------|------------|
+| **Generador de contrasenyes** | Crea contrasenyes segures i úniques automàticament |
+| **Auto-Fill** | Emplena automàticament els camps de credencials |
+| **Caixa Forta** | Emmagatzema i organitza totes les credencials |
+| **Sincronització** | Manté les contrasenyes actualitzades en tots els dispositius |
+| **Exportació** | Permet fer còpies de seguretat en format .json o .csv |
+
+---
+
+## Suport i Recursos Addicionals
+
+- 📚 [Documentació oficial de Bitwarden](https://bitwarden.com/help/)
+- 🔐 [Configurar 2FA (Autenticació de Doble Factor)](https://bitwarden.com/help/setup-two-step-login/)
+- 💼 Per a suport intern, contacteu amb l'equip tècnic d'EverPia
+
+---
+
+**Data de creació:** Octubre 2025  
+**Versió:** 1.0  
+**Revisat per:** Equip Tècnic EverPia
