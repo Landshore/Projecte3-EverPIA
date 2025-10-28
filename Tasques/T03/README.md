@@ -30,5 +30,4 @@ S’han creat **Storage Pools** i **Storage Spaces** amb diferents nivells de re
 ---
 
 ## Enllaços
-- [Documentació Windows Storage Spaces](windows-storage.md)  
-- [Documentació Linux LVM](linux-lvm.md) *(si s’aplica)*
+- [Documentació Windows Storage Spaces](windows-storage.md)
