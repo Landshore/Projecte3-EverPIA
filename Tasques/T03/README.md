@@ -17,8 +17,7 @@ S’han creat **Storage Pools** i **Storage Spaces** amb diferents nivells de re
 ---
 
 ## Contingut de la carpeta tasca03
-- [windows-storage.md](windows-storage.md) – Documentació completa del procés Windows Storage Spaces, amb captures, passos i explicacions.  
-- [linux-lvm.md](linux-lvm.md) – (Opcional si es realitza la part Linux).  
+- [windows-storage.md](windows-storage.md) – Documentació completa del procés Windows Storage Spaces, amb captures, passos i explicacions.
 - Captures de pantalla i evidències de la demostració.
 
 ---
