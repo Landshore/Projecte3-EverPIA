@@ -27,8 +27,7 @@ Aquesta peça audiovisual és un **producte final professional** que pot formar 
 ---
 
 ## 📺 Publicació del vídeo
-El vídeo s’ha penjat a la plataforma **Microsoft Stream** (Office 365), assegurant-ne l’accessibilitat amb permisos de visualització adequats.  
-> 💡 *També es pot allotjar en altres plataformes educatives o privades segons les necessitats del portfoli.*
+El vídeo s’ha penjat a la plataforma **Google Drive**. 
 
 **Enllaç al vídeo:** [🔗https://drive.google.com/drive/folders/1IEiY3J_9k_VQacQLzY8VJ3ugZmqxna19?usp=sharing]
 
