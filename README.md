@@ -1,6 +1,6 @@
 # Projecte-3 — EverPia 2
 
-![EverPia Logo](img/everpia_logo.png)
+![EverPia Logo](img/capturepia)
 
 Repositori oficial del projecte **EverPia 2** del grup **SMiX2**.  
 Aquest repositori conté tota la documentació, tasques i productes desenvolupats durant el projecte integrat.
