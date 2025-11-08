@@ -8,6 +8,7 @@ dig xtec.cat A
 ```
 
 ![im1](img/im1.png)
+
 *Captura del terminal amb la comanda `dig xtec.cat A`, mostrant la resposta del servidor DNS amb la IP 83.247.151.214, el TTL de 1281 segons i el servidor 127.0.0.53 que ha respost. Es veuen les seccions QUESTION, ANSWER i les estadístiques de la consulta.*
 
 ### Anàlisi Comanda 1:
@@ -27,6 +28,7 @@ dig tecnocampus.cat NS
 ```
 
 ![im2](img/im2.png)
+
 *Captura del terminal amb la comanda `dig tecnocampus.cat NS`, mostrant 4 servidors de noms autoritatius d'Amazon AWS (ns-1071.awsdns-05.org, ns-130.awsdns-16.com, ns-1689.awsdns-19.co.uk, ns-535.awsdns-02.net) amb els seus TTL de 10887 segons. La secció ADDITIONAL mostra les IPs IPv4 i IPv6 de cada servidor NS.* ns-130.awsdns-16.com, ns-1689.awsdns-19.co.uk, ns-535.awsdns-02.net) amb els seus TTL de 10887 segons. La secció ADDITIONAL mostra les IPs IPv4 i IPv6 de cada servidor NS.*
 
 ### Quins són els servidors de noms autoritatius?
@@ -50,6 +52,7 @@ dig escolapia.cat SOA
 ```
 
 ![im3](img/im3.png)
+
 *Captura del terminal amb la comanda `dig escolapia.cat SOA`, mostrant el registre SOA amb el servidor de noms primari (dns1.nominalia.com), el correu de l'administrador (root.dns1.nominalia.com), el número de sèrie (1761028965) i els paràmetres de sincronització (REFRESH 86400, RETRY 7200, EXPIRE 2592000, MINIMUM 300).*
 
 ### Quin és el correu de l'administrador?
@@ -70,6 +73,7 @@ dig -x 147.83.2.135
 ```
 
 ![im4](img/im4.png)
+
 *Captura del terminal amb la comanda `dig -x 147.83.2.135`, mostrant la consulta de resolució inversa PTR amb 8 registres de dominis associats a la IP 147.83.2.135 de la UPC (edicioWeb.produccio.upc.edu, gateens.upc.edu, upc.cat, barcelonatech.upc.edu, upc.edu, barcelonatech-upc.eu, www.upc.es, barcelonatech.es.upc.edu) amb TTL de 3641 segons.*
 
 ### Anàlisi Comanda 4:
@@ -109,6 +113,7 @@ $ nslookup
 ```
 
 ![im5](img/im5.png)
+
 *Captura del terminal amb nslookup en mode interactiu, mostrant la consulta `set type=A` seguida de `tecnocampus.cat`. El servidor 127.0.0.53 respon amb "Non-authoritative answer" i proporciona 4 adreces IP (18.172.213.97, 18.172.213.8, 18.172.213.110, 18.172.213.22).*
 
 ### Anàlisi: Per què indica que la resposta és no autoritativa?
