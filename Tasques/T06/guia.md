@@ -145,6 +145,7 @@ $ nslookup
 ```
 
 ![im6](img/im6.png)
+
 *Captura del terminal amb nslookup consultant directament el servidor autoritatiu 205.251.196.47 (ns-1071.awsdns-05.org). Després de configurar `server 205.251.196.47` i `set type=A`, la consulta de `tecnocampus.cat` retorna les mateixes 4 IPs però sense el missatge "Non-authoritative answer", indicant que és una resposta oficial del servidor autoritatiu.*
 
 ### Anàlisi: Quines diferències s'observen amb la Comanda 1?
