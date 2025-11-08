@@ -7,7 +7,7 @@
 dig xtec.cat A
 ```
 
-![im1](im1.png)
+![im1](img/im1.png)
 *Captura del terminal amb la comanda `dig xtec.cat A`, mostrant la resposta del servidor DNS amb la IP 83.247.151.214, el TTL de 1281 segons i el servidor 127.0.0.53 que ha respost. Es veuen les seccions QUESTION, ANSWER i les estadístiques de la consulta.*
 
 ### Anàlisi Comanda 1:
@@ -26,8 +26,8 @@ dig xtec.cat A
 dig tecnocampus.cat NS
 ```
 
-![im2](im2.png)
-*Captura del terminal amb la comanda `dig tecnocampus.cat NS`, mostrant 4 servidors de noms autoritatius d'Amazon AWS (ns-1071.awsdns-05.org, ns-130.awsdns-16.com, ns-1689.awsdns-19.co.uk, ns-535.awsdns-02.net) amb els seus TTL de 10887 segons. La secció ADDITIONAL mostra les IPs IPv4 i IPv6 de cada servidor NS.*
+![im2](img/im2.png)
+*Captura del terminal amb la comanda `dig tecnocampus.cat NS`, mostrant 4 servidors de noms autoritatius d'Amazon AWS (ns-1071.awsdns-05.org, ns-130.awsdns-16.com, ns-1689.awsdns-19.co.uk, ns-535.awsdns-02.net) amb els seus TTL de 10887 segons. La secció ADDITIONAL mostra les IPs IPv4 i IPv6 de cada servidor NS.* ns-130.awsdns-16.com, ns-1689.awsdns-19.co.uk, ns-535.awsdns-02.net) amb els seus TTL de 10887 segons. La secció ADDITIONAL mostra les IPs IPv4 i IPv6 de cada servidor NS.*
 
 ### Quins són els servidors de noms autoritatius?
 
@@ -49,7 +49,7 @@ dig tecnocampus.cat NS
 dig escolapia.cat SOA
 ```
 
-![im3](im3.png)
+![im3](img/im3.png)
 *Captura del terminal amb la comanda `dig escolapia.cat SOA`, mostrant el registre SOA amb el servidor de noms primari (dns1.nominalia.com), el correu de l'administrador (root.dns1.nominalia.com), el número de sèrie (1761028965) i els paràmetres de sincronització (REFRESH 86400, RETRY 7200, EXPIRE 2592000, MINIMUM 300).*
 
 ### Quin és el correu de l'administrador?
@@ -69,7 +69,7 @@ dig escolapia.cat SOA
 dig -x 147.83.2.135
 ```
 
-![im4](im4.png)
+![im4](img/im4.png)
 *Captura del terminal amb la comanda `dig -x 147.83.2.135`, mostrant la consulta de resolució inversa PTR amb 8 registres de dominis associats a la IP 147.83.2.135 de la UPC (edicioWeb.produccio.upc.edu, gateens.upc.edu, upc.cat, barcelonatech.upc.edu, upc.edu, barcelonatech-upc.eu, www.upc.es, barcelonatech.es.upc.edu) amb TTL de 3641 segons.*
 
 ### Anàlisi Comanda 4:
@@ -108,7 +108,7 @@ $ nslookup
 > tecnocampus.cat
 ```
 
-![im5](im5.png)
+![im5](img/im5.png)
 *Captura del terminal amb nslookup en mode interactiu, mostrant la consulta `set type=A` seguida de `tecnocampus.cat`. El servidor 127.0.0.53 respon amb "Non-authoritative answer" i proporciona 4 adreces IP (18.172.213.97, 18.172.213.8, 18.172.213.110, 18.172.213.22).*
 
 ### Anàlisi: Per què indica que la resposta és no autoritativa?
@@ -144,7 +144,7 @@ $ nslookup
 > tecnocampus.cat
 ```
 
-![im6](im6.png)
+![im6](img/im6.png)
 *Captura del terminal amb nslookup consultant directament el servidor autoritatiu 205.251.196.47 (ns-1071.awsdns-05.org). Després de configurar `server 205.251.196.47` i `set type=A`, la consulta de `tecnocampus.cat` retorna les mateixes 4 IPs però sense el missatge "Non-authoritative answer", indicant que és una resposta oficial del servidor autoritatiu.*
 
 ### Anàlisi: Quines diferències s'observen amb la Comanda 1?
@@ -185,7 +185,7 @@ $ nslookup
 sudo nano /etc/hosts
 ```
 
-![im7](im7.png)
+![im7](img/im7.png)
 *Captura de l'editor de text nano mostrant el fitxer /etc/hosts obert amb sudo, on s'han afegit entrades locals personalitzades com ara `192.168.1.100 servidor.local`, `192.168.1.50 impressora.local` i `10.0.0.5 backup.local` sota les entrades predeterminades del sistema (127.0.0.1 localhost i 127.0.1.1 per al hostname del sistema).*
 
 **Exemple de contingut afegit:**
@@ -202,7 +202,7 @@ sudo nano /etc/hosts
 ping servidor.local
 ```
 
-![im8](im8.png)
+![im8](img/im8.png)
 *Captura del terminal executant `ping servidor.local`, mostrant que el sistema resol correctament el nom "servidor.local" a la IP 192.168.1.100 (definida a /etc/hosts) i envia paquets ICMP amb èxit, mostrant respostes amb temps de resposta, TTL i estadístiques de paquets transmesos i rebuts.*
 
 **Resultat esperat:**
