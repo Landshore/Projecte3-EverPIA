@@ -34,7 +34,7 @@ El projecte es divideix en dues fases:
 [🔗 https://drive.google.com/drive/folders/1VR-PIk7s3nmpXX5_eFc4a9dDM6ubm5KL?usp=drive_link
 ]
 
-📁 Enllaç al fitxer de la tasca (enunciat i materials):
+📁 Enllaç a la tasca
 [🔗 https://drive.google.com/drive/folders/13TcxvGVCROX_xjcKyqAzBBkk0Bpcqnp1?usp=drive_link
 ]
 ---
