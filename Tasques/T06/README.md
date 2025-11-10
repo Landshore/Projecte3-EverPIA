@@ -28,11 +28,15 @@ El projecte es divideix en dues fases:
 
 ---
 
-## 📺 Publicació del vídeo
-El vídeo s’ha penjat a la plataforma **Google Drive**.
+🎬 Activitats
 
-**Enllaç al vídeo:** [🔗https://drive.google.com/drive/folders/1IEiY3J_9k_VQacQLzY8VJ3ugZmqxna19?usp=sharing]
+📂 Enllaç al vídeo (Google Drive):
+[🔗 https://drive.google.com/drive/folders/1VR-PIk7s3nmpXX5_eFc4a9dDM6ubm5KL?usp=drive_link
+]
 
+📁 Enllaç al fitxer de la tasca (enunciat i materials):
+[🔗 https://drive.google.com/drive/folders/13TcxvGVCROX_xjcKyqAzBBkk0Bpcqnp1?usp=drive_link
+]
 ---
 
 ## 🧰 Fase Pràctica: Auditoria DNS amb Eines CLI
