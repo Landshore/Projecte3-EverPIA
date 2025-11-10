@@ -31,9 +31,11 @@ El projecte es divideix en dues fases:
 🎬 Activitats
 
 Enllaç a la tasca (Google Drive):
-📂 [https://drive.google.com/drive/folders/13TcxvGVCROX_xjcKyqAzBBkk0Bpcqnp1?usp=drive_link]
+📂 
+[https://drive.google.com/drive/folders/13TcxvGVCROX_xjcKyqAzBBkk0Bpcqnp1?usp=drive_link]
 
-📂 Enllaç al vídeo (Google Drive):
+Enllaç al vídeo (Google Drive):
+📂
 [🔗 https://drive.google.com/drive/folders/1VR-PIk7s3nmpXX5_eFc4a9dDM6ubm5KL?usp=drive_link]
 
 ---
