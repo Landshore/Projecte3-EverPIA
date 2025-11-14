@@ -1,179 +1,121 @@
-📘 P03 – Rèplica Web WordPress
-Replicar en local la web davidperalvarez.com amb criteri tècnic i bones pràctiques professionals
-🧩 Descripció del projecte
+# 📘 P03 – Rèplica Web WordPress  
+Replicar en local la web **davidperalvarez.com** amb WP Local.
 
-Després de superar la primera fase de supervivència tècnica a EverPia, el nou repte consisteix a replicar en local una web corporativa real feta amb WordPress, concretament:
+## 🧩 Descripció del projecte
+Aquest projecte consisteix a replicar en local una web corporativa real feta amb WordPress. L'objectiu és analitzar-ne l’estructura, entendre l’arquitectura del contingut i aprendre bones pràctiques de desenvolupament web professional.
 
-➡️ https://davidperalvarez.com
+A partir del web original **https://davidperalvarez.com**, hauràs de construir una còpia fidel en un entorn local utilitzant **WP Local**.
 
-Aquesta pràctica forma part de l’escenari “Sobreviure en una empresa IT”, on no només cal fer que tot funcioni, sinó fer-ho amb:
+## 🎯 Objectius d’aprenentatge
+- Analitzar una web professional feta amb WordPress.  
+- Identificar la jerarquia i arquitectura del contingut.  
+- Reproduir pàgines, menús i estructura visual.  
+- Aprendre bones pràctiques de disseny, navegació i UX.  
+- Preparar-se per futurs projectes reals amb clients.
 
-Rigor tècnic
+---
 
-Capacitat d’anàlisi
+## 🛠️ Entorn de treball
+Treballa amb **WP Local** instal·lat al PC de classe.
 
-Entenent l’arquitectura i la jerarquia de continguts
+### Creació del projecte
+Crea una nova web amb el nom següent:
 
-Respectant l’aparença, la coherència i l’experiència d’usuari (UX)
-
-L’objectiu final és construir una còpia fidel de l’estructura del web original des d’un entorn local utilitzant WP Local.
-
-🎯 Objectius d’aprenentatge
-
-Aquesta pràctica et permetrà:
-
-Analitzar una web professional feta amb WordPress.
-
-Reproduir la seva estructura de pàgines, menús i continguts.
-
-Identificar i comprendre la jerarquia visual i arquitectònica.
-
-Aprendre bones pràctiques de desenvolupament i manteniment web.
-
-Preparar-te per futurs projectes reals amb clients.
-
-🛠️ Entorn de treball
-
-Treballarem amb:
-
-WP Local instal·lat al PC de classe.
-
-WordPress amb temes i plugins seleccionats a partir de l’anàlisi del web original.
-
-🔧 Creació del projecte
-
-A WP Local, crea una nova web amb nom:
-
+Exemple:
 replica_[nom]
+---
 
+## 🔍 Investigació prèvia
 
-Exemple: replica_Cristian.
+### Analitza el web original
+Explora totes les seccions del web original i pren nota de:
 
-🔍 Investigació prèvia
+- Navegació (menús i submenús)  
+- Organització del contingut  
+- Estil visual: colors, tipografies, distribució  
+- Jerarquia de pàgines  
 
-Abans de construir la rèplica, analitza el web original:
+### Eines d’investigació recomanades
+- **Detecció de theme i plugins:**  
+  https://www.wpthemedetector.com/
 
-🔎 Navegació i estructura
+- **Colors exactes:**  
+  https://imagecolorpicker.com/ca
 
-Menú principal i submenús
+- **Fonts utilitzades:**  
+  https://www.myfonts.com/es
 
-Jerarquia de continguts
+- **Sitemap XML (llista de totes les URL):**  
+  https://davidperalvarez.com/page-sitemap.xml
 
-Organització de seccions
+---
 
-Distribució del disseny
+## 🏗️ Creació de pàgines
+Reprodueix totes les pàgines principals presents al sitemap del web original, com per exemple:
 
-🎨 Estil visual
+- Inici  
+- Sobre mí  
+- Academia básica  
+- Mantenimiento para academias online  
+- Consultoría para academias online  
+- Proyectos que he realizado  
+- Descarga  
+- Contactar  
+- Política de privacidad  
+- Cookies  
+- Condiciones de uso  
 
-Colors
+### Continguts
+Pots:
+- Copiar el text original, **o**
+- Utilitzar *Lorem Ipsum*
 
-Tipografies
+Però sempre has de mantenir:
+- La mateixa estructura  
+- Els mateixos títols  
+- La mateixa jerarquia visual  
 
-Espaiat i composició
+### Recomanació important
+Instal·la el plugin:
 
-🔌 Plugins i Theme utilitzats
+**Kadence Blocks – Gutenberg Blocks for Page Builder Features**
 
-Eines recomanades per obtenir informació:
+T’ajudarà a construir pàgines més complexes de manera fàcil.
 
-WP Theme Detector:
-https://www.wpthemedetector.com/
+---
 
-Colors exactes:
-https://imagecolorpicker.com/ca
+## ⚙️ Configuració del lloc WordPress
 
-Tipografies:
-https://www.myfonts.com/es
+### Configuració general
+- Estableix una **pàgina d’inici estàtica**  
+- Configura el **menú principal** i submenús  
+- Ajusta els **enllaços permanents**  
+- Configura paràmetres generals:
+  - Idioma  
+  - Zona horària  
+  - Nom del lloc  
 
-🗺️ Sitemap XML (imprescindible)
+### Disseny
+- Prova diferents **temes** fins a trobar-ne un que visualment s’aproximi al web original.
+- Ajusta colors, tipografies i espais per replicar la coherència visual.
 
-Per veure totes les pàgines i URL del web original:
+---
 
-➡️ https://davidperalvarez.com/page-sitemap.xml
+## ✅ Resultat final esperat
+En finalitzar la pràctica hauràs creat:
 
-🏗️ Creació de pàgines
+- Una còpia fidel del web original a nivell d’estructura.  
+- Totes les pàgines del sitemap.  
+- Menús i navegació iguals als del web real.  
+- Una aparença visual coherent i propera a l’original.
 
-Has de crear totes les pàgines principals del web, entre elles:
+---
 
-Inici
+## 🏁 Conclusions
+Aquesta tasca simula un encàrrec real d’una empresa IT. T’ajuda a desenvolupar:
 
-Sobre mí
+- Capacitat d’anàlisi web  
+- Competències en WordPress  
+- Adaptació a webs professionals  
+- Habilitats de manteniment i replicació per a futurs clients
 
-Academia básica
-
-Mantenimiento para academias online
-
-Consultoría para academias online
-
-Proyectos que he realizado
-
-Descarga
-
-Contactar
-
-Política de privacidad
-
-Cookies
-
-Condiciones de uso
-
-Altres pàgines presents al sitemap
-
-✏️ Continguts
-
-Pots copiar el text original o utilitzar Lorem Ipsum.
-
-El que és imprescindible és mantenir l’estructura, els títols i la jerarquia visual.
-
-🧱 Eina recomanada per blocs:
-
-Kadence Blocks – Gutenberg Blocks for Page Builder Features
-(per facilitar la construcció de pàgines complexes)
-
-⚙️ Configuració del lloc WordPress
-🔧 Configuració bàsica
-
-Definir una pàgina d’inici estàtica
-
-Configurar el menú principal i submenús
-
-Ajustar enllaços permanents
-
-Ajustar paràmetres generals:
-
-Idioma
-
-Zona horària
-
-Nom del lloc
-
-🎨 Disseny i theme
-
-Prova diferents temes fins a trobar el que millor s’ajusti al disseny original.
-
-Ajusta-lo perquè la web s’assembli visualment a l’original.
-
-✅ Resultat final esperat
-
-Al final del projecte hauràs creat:
-
-Una web WordPress local estructuralment i visualment fidel al web original.
-
-Una rèplica completa del sitemap, incloent-hi totes les pàgines.
-
-Un menú i jerarquia de navegació iguals.
-
-Un entorn preparat com si fos un projecte real amb un client.
-
-🏁 Conclusions
-
-Aquesta pràctica simula una tasca real d’una consultora IT, on cal:
-
-Entendre un web complex
-
-Replicar-lo amb coherència
-
-Utilitzar eines professionals
-
-Adaptar-se al disseny i continguts existents
-
-Dominar aquest procés et prepara per treballar amb WordPress en entorns reals de desenvolupament i manteniment web.
