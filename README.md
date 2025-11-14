@@ -9,18 +9,18 @@ Aquest repositori conté tota la documentació, tasques i productes desenvolupat
 
 ## Índex de continguts
 
-- [T00 — Presentació i posada en marxa](#t00--presentació-i-posada-en-marxa)
-- [T01 — Gestors de contrasenyes](#t01--gestors-de-contrasenyes)
-- [T02 — Gestió de l’emmagatzematge](#t02--gestió-de-lemmagatzematge)
-- [T03 — Gestió flexible de discos](#t03--gestió-flexible-de-discos)
-- [T04 — Serveis de Directori (LDAP)](#t04--serveis-de-directori-ldap)
-- [T05 — Models de negoci](#t05--models-de-negoci)
-- [T06 — Fonaments del DNS](#t06--fonaments-del-dns)
-- [T07 — Instal·lació servidor DNS](#t07--instal·lació-servidor-dns)
-- [Productes P01–P06](#productes)
-- [Tasques transversals](#tasques-transversals)
-- [Estructura del repositori](#estructura-del-repositori)
-- [Enllaços d’interès](#enllaços-dinterès)
+- [T00 — Presentació i posada en marxa]
+- [T01 — Gestors de contrasenyes]
+- [T02 — Gestió de l’emmagatzematge]
+- [T03 — Gestió flexible de discos]
+- [T04 — Serveis de Directori (LDAP)]
+- [T05 — Models de negoci]
+- [T06 — Fonaments del DNS]
+- [T07 — Instal·lació servidor DNS]
+- [Productes P01–P06]
+- [Tasques transversals]
+- [Estructura del repositori]
+- [Enllaços d’interès]
 
 ---
 
