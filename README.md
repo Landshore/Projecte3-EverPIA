@@ -112,6 +112,3 @@ Aquest repositori conté tota la documentació, tasques i productes desenvolupat
 
 ---
 
-## Estructura del repositori
-
-
