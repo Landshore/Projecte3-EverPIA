@@ -1,1 +1,164 @@
+# 🐧 1. Guia Linux — LVM (Logical Volume Manager)
+
+## 1.1 Configuració inicial (afegir discos)
+![01](T03/img/01.png)
+> Vista inicial de la màquina virtual abans d’afegir els discos.
+
+![02](T03/img/02.png)
+![03](T03/img/03.png)
+![04](T03/img/04.png)
+![05](T03/img/05.png)
+> Afegim dos discos virtuals de 10 GB cadascun.
+
+![06](T03/img/06.png)
+> `fdisk -l` confirma la presència de *sdb* i *sdc*.
+
+---
+
+## 1.2 Crear PV, VG i LV
+![07](T03/img/07.png)
+![08](T03/img/08.png)
+![09](T03/img/09.png)
+![10](T03/img/10.png)
+> Creació dels volums físics (PV) i del grup de volums (VG).
+
+---
+
+## 1.3 Crear el volum lògic
+![11](T03/img/11.png)
+![12](T03/img/12.png)
+> Creació d’un LV de 200 MB.
+
+---
+
+## 1.4 Formatació, muntatge i fstab
+![13](T03/img/13.png)
+![14](T03/img/14.png)
+![15](T03/img/15.png)
+![16](T03/img/16.png)
+![17](T03/img/17.png)
+![18](T03/img/18.png)
+> Formatar en ext4 i muntatge permanent via `/etc/fstab`.
+
+---
+
+## 1.5 Alta disponibilitat — Mirroring
+![19](T03/img/19.png)
+![20](T03/img/20.png)
+![21](T03/img/21.png)
+![22](T03/img/22.png)
+> Eliminació del volum anterior per crear un LV amb mirroring.
+
+![23](T03/img/23.png)
+> Creació del volum mirall `mirrorlv`.
+
+---
+
+## 1.6 Snapshots (Instantànies)
+![24](T03/img/24.png)
+![25](T03/img/25.png)
+![26](T03/img/26.png)
+![27](T03/img/27.png)
+> Creació del LV origen.
+
+![28](T03/img/28.png)
+![29](T03/img/29.png)
+![30](T03/img/30.png)
+![31](T03/img/31.png)
+![32](T03/img/32.png)
+> Creació de la snapshot.
+
+![33](T03/img/33.png)
+![34](T03/img/34.png)
+![35](T03/img/35.png)
+![36](T03/img/36.png)
+![37](T03/img/37.png)
+![38](T03/img/38.png)
+![39](T03/img/39.png)
+> Restauració correcta des de la snapshot.
+
+---
+
+## 1.7 Escalabilitat (lvextend / lvreduce)
+![40](T03/img/40.png)
+![41](T03/img/41.png)
+![42](T03/img/42.png)
+> Ampliació i reducció de volums lògics.
+
+---
+
+# 🪟 2. Guia Windows — Storage Spaces
+
+## 2.1 Configuració inicial (afegir discos)
+![43](T03/img/43.png)
+![44](T03/img/44.png)
+![45](T03/img/45.png)
+> Afegim tres discos virtuals de 10GB.
+
+---
+
+## 2.2 Crear Storage Pool
+![46](T03/img/46.png)
+![47](T03/img/47.png)
+![48](T03/img/48.png)
+> Creació del pool i verificació.
+
+---
+
+## 2.3 Mirroring (Dades_Miralls)
+![49](T03/img/49.png)
+![50](T03/img/50.png)
+![51](T03/img/51.png)
+![52](T03/img/52.png)
+> Test de mirroring i eliminació d’un disc.
+
+---
+
+## 2.4 Paritat (Dades_Paritat)
+![53](T03/img/53.png)
+![54](T03/img/54.png)
+![55](T03/img/55.png)
+> Creació del volum de paritat i comparació.
+
+---
+
+## 2.5 Triple Mirror
+![56](T03/img/56.png)
+![57](T03/img/57.png)
+![58](T03/img/58.png)
+> Creació del volum en triple mirall.
+
+---
+
+## 2.6 Comprovació per PowerShell
+![59](T03/img/59.png)
+![60](T03/img/60.png)
+![61](T03/img/61.png)
+> Consulta del pool i discos virtuals amb `Get-StoragePool` i `Get-VirtualDisk`.
+
+---
+
+# 🔍 3. Comparativa Linux vs Windows
+
+| Funció                       | LVM (Linux) | Storage Spaces (Windows) |
+|-----------------------------|-------------|----------------------------|
+| Snapshots                  | ✔ Sí        | ✖ No                       |
+| Mirroring                  | ✔ Sí        | ✔ Sí                       |
+| Paritat                    | ✔ RAID      | ✔ Natiu                    |
+| Triple mirall              | ✖ No        | ✔ Sí                       |
+| CLI                        | Molt potent | Mitjà (PowerShell)         |
+| GUI                        | No típica   | ✔ Sí                       |
+| Flexibilitat               | Molt alta   | Mitjana                    |
+
+---
+
+# 📝 Conclusions
+Hem après com gestionar discos de manera flexible tant en Linux com en Windows.  
+Les dues plataformes permeten crear volums dinàmics i robustos, però:
+
+- **Linux LVM** ofereix més control i opcions avançades (snapshots, CLI poderosa).  
+- **Windows Storage Spaces** és més senzill i orientat a usuaris amb GUI.  
+
+Aquesta activitat reforça la importància de l’emmagatzematge tolerant fallades i escalable.
+
 
