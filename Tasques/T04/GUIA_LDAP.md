@@ -1,200 +1,200 @@
-# LDAP Configuration Guide
+# Guia de Configuració LDAP
 
-This guide walks through the complete process of configuring an LDAP server and client setup.
+Aquesta guia explica el procés complet de configuració d'un servidor LDAP i la configuració del client.
 
-## Server Configuration
+## Configuració del Servidor
 
-### 1. Check SLDAP Status
-![SLDAP Status](./img/01.png)
-*Verify the SLDAP service is running correctly*
+### 1. Comprovar l'estat de SLDAP
+![Estat SLDAP](./img/01.png)
+*Verificar que el servei SLDAP s'està executant correctament*
 
-### 2. Verify Directory Creation
-![Directory Verification](./img/02.png)
-*Confirm the LDAP directory structure has been created as intended*
+### 2. Verificar la creació del directori
+![Verificació del directori](./img/02.png)
+*Confirmar que l'estructura del directori LDAP s'ha creat correctament*
 
-### 3. Reconfigure SLDAP
-![Dpkg Reconfigure Command](./img/03.png)
-*Execute the reconfiguration command: `dpkg-reconfigure sldap`*
+### 3. Reconfigurar SLDAP
+![Comanda Dpkg Reconfigure](./img/03.png)
+*Executar la comanda de reconfiguració: `dpkg-reconfigure sldap`*
 
-### 4. Configuration Wizard - Step 1
-![Wizard No Option](./img/04.png)
-*Select "No" at the initial prompt*
+### 4. Assistent de configuració - Pas 1
+![Opció No](./img/04.png)
+*Seleccionar "No" a la pregunta inicial*
 
-### 5. Set Domain Name
-![Domain Configuration](./img/05.png)
-*Enter the domain: `innovatech28.test`*
+### 5. Establir el nom del domini
+![Configuració del domini](./img/05.png)
+*Introduir el domini: `innovatech28.test`*
 
-### 6. Organization Name
-![Organization Name](./img/06.png)
-*Set organization name: `inovatechxx` (where xx is your list number)*
+### 6. Nom de l'organització
+![Nom de l'organització](./img/06.png)
+*Establir el nom de l'organització: `inovatechxx` (on xx és el teu número de llista)*
 
-### 7. Administrator Password
-![Admin Password](./img/07.png)
-*Set the administrator password (usuari)*
+### 7. Contrasenya de l'administrador
+![Contrasenya Admin](./img/07.png)
+*Establir la contrasenya de l'administrador (usuari)*
 
-### 8. Confirmation Prompts
-![Confirmation Yes](./img/08.png)
-*Confirm with "Yes" for both prompts*
+### 8. Confirmacions
+![Confirmació Sí](./img/08.png)
+*Confirmar amb "Sí" per ambdues preguntes*
 
-### 9. Verify Directory Structure
-![Final Directory Check](./img/09.png)
-*Confirm the directory has been properly created*
+### 9. Verificar l'estructura del directori
+![Comprovació final del directori](./img/09.png)
+*Confirmar que el directori s'ha creat correctament*
 
-## Creating LDIF Files
+## Creació de fitxers LDIF
 
-### 10. Create First File
-![Create LDIF File](./img/10.png)
-*Create the initial LDIF configuration file*
+### 10. Crear el primer fitxer
+![Crear fitxer LDIF](./img/10.png)
+*Crear el fitxer de configuració LDIF inicial*
 
-### 11. File Modifications
-![LDIF Modifications](./img/11.png)
-*Add the necessary modifications to the LDIF file*
+### 11. Modificacions del fitxer
+![Modificacions LDIF](./img/11.png)
+*Afegir les modificacions necessàries al fitxer LDIF*
 
-### 12. Add Elements Command
-![LDAP Add Command](./img/12.png)
-*Use ldapadd command to insert elements into the directory*
+### 12. Comanda per afegir elements
+![Comanda LDAP Add](./img/12.png)
+*Utilitzar la comanda ldapadd per inserir elements al directori*
 
-### 13. Add Entry
-![Add Entry Data](./img/13.png)
-*Add the new entry to the LDAP directory*
+### 13. Afegir entrada
+![Afegir dades d'entrada](./img/13.png)
+*Afegir la nova entrada al directori LDAP*
 
-### 14. Search Verification
-![LDAP Search](./img/14.png)
-*Search the directory to verify the entry was added*
+### 14. Verificació amb cerca
+![Cerca LDAP](./img/14.png)
+*Cercar al directori per verificar que l'entrada s'ha afegit*
 
-### 15. Attribute Search
-![Attribute Search](./img/15.png)
-*Search for specific attributes in LDAP*
+### 15. Cerca d'atribut
+![Cerca d'atribut](./img/15.png)
+*Cercar atributs específics a LDAP*
 
-### 16. Execute Search Command
-![Search Command Execution](./img/16.png)
-*Run the search command to retrieve data*
+### 16. Executar comanda de cerca
+![Execució de comanda de cerca](./img/16.png)
+*Executar la comanda de cerca per recuperar dades*
 
-## LDAP Account Manager Setup
+## Configuració de LDAP Account Manager
 
-### 17. Install Account Manager
-![Install Account Manager](./img/17.png)
-*Install LDAP Account Manager package*
+### 17. Instal·lar Account Manager
+![Instal·lar Account Manager](./img/17.png)
+*Instal·lar el paquet LDAP Account Manager*
 
-### 18. Open LAM Interface
-![LAM Login](./img/18.png)
-*Access LDAP Account Manager web interface and edit server profiles*
+### 18. Obrir la interfície LAM
+![Login LAM](./img/18.png)
+*Accedir a la interfície web de LDAP Account Manager i editar perfils de servidor*
 
-### 19. Server Profile Password
-![Server Profile Password](./img/19.png)
-*Enter the LAM configuration password: `lam`*
+### 19. Contrasenya del perfil de servidor
+![Contrasenya del perfil de servidor](./img/19.png)
+*Introduir la contrasenya de configuració de LAM: `lam`*
 
-### 20. Account Type Configuration
-![Account Types Settings](./img/20.png)
-*Configure active account types (users/groups)*
+### 20. Configuració de tipus de comptes
+![Configuració de tipus de comptes](./img/20.png)
+*Configurar els tipus de comptes actius (usuaris/grups)*
 
-## Creating Groups
+## Creació de Grups
 
-### 21. Create Group
-![Create New Group](./img/21.png)
-*Create a new group in LDAP*
+### 21. Crear grup
+![Crear nou grup](./img/21.png)
+*Crear un nou grup a LDAP*
 
-### 22. Save and Return
-![Save Group](./img/22.png)
-*Save the group configuration and return to main menu*
+### 22. Guardar i tornar
+![Guardar grup](./img/22.png)
+*Guardar la configuració del grup i tornar al menú principal*
 
-### 23. Tech Group
-![Tech Group](./img/23.png)
-*Configure the tech group*
+### 23. Grup Tech
+![Grup Tech](./img/23.png)
+*Configurar el grup tech*
 
-### 24. Groups List
-![Groups Listing](./img/24.png)
-*View complete list of created groups*
+### 24. Llista de grups
+![Llistat de grups](./img/24.png)
+*Veure la llista completa de grups creats*
 
-## Creating Users
+## Creació d'Usuaris
 
-### 25. New Users Section
-![New User Personal](./img/25.png)
-*Navigate to "New Users" section and fill in personal credentials*
+### 25. Secció de nous usuaris
+![Nou usuari personal](./img/25.png)
+*Navegar a la secció "Nous usuaris" i omplir les credencials personals*
 
-### 26. Unix Password Header
-![Unix Password Header](./img/26.png)
-*Near the password header, check the Unix header and save*
+### 26. Capçalera de contrasenya Unix
+![Capçalera contrasenya Unix](./img/26.png)
+*Prop de la capçalera de contrasenya, marcar la capçalera Unix i guardar*
 
-### 27. Unix Section Configuration
-![Unix Section](./img/27.png)
-*Configure and save Unix section settings*
+### 27. Configuració de la secció Unix
+![Secció Unix](./img/27.png)
+*Configurar i guardar la configuració de la secció Unix*
 
-### 28. Create Manager User
-![Create Manager](./img/28.png)
-*Create a manager user account*
+### 28. Crear usuari manager
+![Crear Manager](./img/28.png)
+*Crear un compte d'usuari manager*
 
-### 29. Manager Unix Settings
+### 29. Configuració Unix del manager
 ![Manager Unix](./img/29.png)
-*Configure Unix settings for manager account*
+*Configurar les opcions Unix per al compte manager*
 
-### 30. Set Manager Password
-![Manager Password](./img/30.png)
-*Set password for manager and save*
+### 30. Establir contrasenya del manager
+![Contrasenya Manager](./img/30.png)
+*Establir la contrasenya per al manager i guardar*
 
-### 31. Users List
-![Users Listing](./img/31.png)
-*View complete list of created users*
+### 31. Llista d'usuaris
+![Llistat d'usuaris](./img/31.png)
+*Veure la llista completa d'usuaris creats*
 
-## Client Configuration (Zorin OS)
+## Configuració del Client (Zorin OS)
 
-### 32. Edit Hosts File
-![Edit Hosts](./img/32.png)
-*On the client (ZORIN), edit `/etc/hosts` file*
+### 32. Editar fitxer hosts
+![Editar Hosts](./img/32.png)
+*Al client (ZORIN), editar el fitxer `/etc/hosts`*
 
-### 33. Verification Command
-![Verify Connection](./img/33.png)
-*Run command to verify connectivity*
+### 33. Comanda de verificació
+![Verificar connexió](./img/33.png)
+*Executar comanda per verificar la connectivitat*
 
-### 34. Additional Command
-![Additional Check](./img/34.png)
-*Execute additional verification command*
+### 34. Comanda addicional
+![Comprovació addicional](./img/34.png)
+*Executar comanda de verificació addicional*
 
-### 35. Server Name Configuration
-![Server Name](./img/35.png)
-*Fill in the missing parts with your server name*
+### 35. Configuració del nom del servidor
+![Nom del servidor](./img/35.png)
+*Omplir les parts que falten amb el nom del teu servidor*
 
-### 36. Further Modifications
-![More Modifications](./img/36.png)
-*Make additional configuration modifications*
+### 36. Més modificacions
+![Més modificacions](./img/36.png)
+*Fer modificacions de configuració addicionals*
 
-### 37. Verification Check
-![Verify Settings](./img/37.png)
-*Verify all configuration settings*
+### 37. Comprovació de verificació
+![Verificar configuració](./img/37.png)
+*Verificar tota la configuració*
 
-### 38. Configure Client File
-![Client File Config](./img/38.png)
-*Configure the client configuration file*
+### 38. Configurar fitxer del client
+![Configuració fitxer client](./img/38.png)
+*Configurar el fitxer de configuració del client*
 
-### 39. Remove use_autho Line
-![Remove Line](./img/39.png)
-*Edit the file and remove the `use_autho` line*
+### 39. Eliminar línia use_autho
+![Eliminar línia](./img/39.png)
+*Editar el fitxer i eliminar la línia `use_autho`*
 
-### 40. Perfect Configuration
-![Perfect Setup](./img/40.png)
-*Configuration completed successfully*
+### 40. Configuració perfecta
+![Configuració perfecta](./img/40.png)
+*Configuració completada amb èxit*
 
-### 41. Restart Service
-![Restart Service](./img/41.png)
-*Restart the LDAP service*
+### 41. Reiniciar servei
+![Reiniciar servei](./img/41.png)
+*Reiniciar el servei LDAP*
 
-### 42. Reinitialize Service
-![Reinit Service](./img/42.png)
-*Reinitialize the service*
+### 42. Reinicialitzar servei
+![Reinicialitzar servei](./img/42.png)
+*Reinicialitzar el servei*
 
-### 43. Check Clients
-![Check Clients](./img/43.png)
-*Verify that clients are properly connected*
+### 43. Comprovar clients
+![Comprovar clients](./img/43.png)
+*Verificar que els clients estan connectats correctament*
 
-## Summary
+## Resum
 
-This guide covers:
-- LDAP server installation and configuration
-- Directory structure creation
-- LDIF file management
-- LDAP Account Manager setup
-- Group and user creation
-- Client configuration on Zorin OS
-- Service verification and troubleshooting
+Aquesta guia cobreix:
+- Instal·lació i configuració del servidor LDAP
+- Creació de l'estructura de directoris
+- Gestió de fitxers LDIF
+- Configuració de LDAP Account Manager
+- Creació de grups i usuaris
+- Configuració del client a Zorin OS
+- Verificació del servei i resolució de problemes
 
-All configuration files and commands are executed with appropriate permissions and verified at each step.
+Tots els fitxers de configuració i comandes s'executen amb els permisos adequats i es verifiquen a cada pas.
