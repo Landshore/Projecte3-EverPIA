@@ -5,7 +5,7 @@ This guide walks through the complete process of configuring an LDAP server and 
 ## Server Configuration
 
 ### 1. Check SLDAP Status
-![SLDAP Status](Projecte3-EverPIA/Tasques/T04/img/01_sldap_status.png)
+![SLDAP Status](Projecte3-EverPIA/Tasques/T04/img/01.png)
 *Verify the SLDAP service is running correctly*
 
 ### 2. Verify Directory Creation
