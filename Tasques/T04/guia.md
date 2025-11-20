@@ -1,400 +1,249 @@
-
-2n - GM Sistemes microinformàtics i xarxes 
-B Seguretat informàtica (B) - (Classe) - 
-25-26 
+GUIA LDAP 
  
-Christian Bogdanas, Pol Hernández, Damian Zibowa i Biel Batalla
-
-
-![Image 1: Screenshot related to LVM or storage configuration](T03/img/01.png)
-
-T03: Gestió flexible de discos (LVM) 
+Mirem  el status del sldap 
  
-●​ Configuració Inicial: Crear un grup de volums (VG) i un volum lògic (LV) utilitzant inicialment 
-un mínim de dos discs durs (simulats) de 10 GB de capacitat. Aquest volum haurà estar 
-formatat i muntat automàticament al sistema mitjançant l’edició de l’arxiu /etc/fstab. 
-●​ Alta Disponibilitat: Implementar la configuració d’un mirall (lvm_mirror) que protegeixi la 
-informació davant la fallada d'un disc. 
-●​ Instantànies (snapshots):  Crear i afegir dos discos de 10 GB al grup de volums. Crear un 
-volum (lvm_dades) amb el primer disc afegit, formatar-lo i muntar-lo. A continuació afegir 
-arxius al volum (poden ser imatges d’Internet). Usar el segon disc afegit per crear un 
-snapshot (lv_snapshot) i documentar com es pot restaurar aquest snapshot, si per exemple, 
-la informació del volum original es danyés. 
-●​ Escalabilitat: Demostrar el procés d'ampliació. Usar l’espai que quedi lliure dins el grup de 
-volums per ampliar el volum lv_dades. 
  
-1. Configuració inicial 
-Primer de tot, es crea una màquina virtual amb Zorin OS.
-
-
-![Image 2: Screenshot related to LVM or storage configuration](T03/img/02.png)
-
-Abans d’engegar-la, s’hi afegeixen dos discos addicionals de 10 GB cadascun, que 
-funcionaran com a nous dispositius físics per al sistema. 
+Comprovem que el directori s’ha creat com hem volgut. 
  
  
+Fem la comanda: nano dpkg-reconfigure sldap 
  
  
-Aquí com podem veure s’han creat correctament.
-
-
-![Image 3: Screenshot related to LVM or storage configuration](T03/img/03.png)
+Cliquem no. 
+ 
+ 
+Posem aquesta (innovatech28.test) 
+ 
+ 
+Posem inovatechxx (xx és num llista).
 
-![Image 4: Screenshot related to LVM or storage configuration](T03/img/04.png)
 
-![Image 5: Screenshot related to LVM or storage configuration](T03/img/05.png)
+![Image 1: LDAP configuration step or command output](T04/img/01.png)
 
-Quan iniciem la màquina, instal·lem l’eina fdisk per verificar que els discos s’han afegit 
-correctament: 
-sudo apt install fdisk 
-Després comprovem la llista de discos disponibles: 
-sudo fdisk -l 
-A més del disc principal (sda), haurien d’aparèixer els dos nous discos (sdb i sdc).
+![Image 2: LDAP configuration step or command output](T04/img/02.png)
 
+![Image 3: LDAP configuration step or command output](T04/img/03.png)
 
-![Image 6: Screenshot related to LVM or storage configuration](T03/img/06.png)
+![Image 4: LDAP configuration step or command output](T04/img/04.png)
 
-2. Creació dels volums físics (PV) 
-Ara convertirem aquests dos discos nous en volums físics utilitzables per LVM. 
-Primer instal·lem LVM: 
-sudo apt install lvm2 
-I després executem les comandes pvcreate per preparar els discos com a volums físics. 
+Posem la contrasenya (usuari) 
  
  
+Posem que si 
  
-3. Creació del grup de volums (VG) 
-Un cop tenim els PV creats, agrupem aquests discos en un Volume Group (VG). 
-Aquest grup és l’espai unificat que utilitzarem per crear posteriorment els volums lògics. 
-La comanda per crear el grup és: 
-sudo vgcreate volgrup /dev/sdb /dev/sdc 
-I podem comprovar-lo amb: 
-sudo vgdisplay
+ 
+Posem que si. 
+ 
+ 
+Comprovem que el directori s’ha creat com hem volgut.
 
 
-![Image 7: Screenshot related to LVM or storage configuration](T03/img/07.png)
+![Image 5: LDAP configuration step or command output](T04/img/05.png)
 
-![Image 8: Screenshot related to LVM or storage configuration](T03/img/08.png)
+![Image 6: LDAP configuration step or command output](T04/img/06.png)
 
-![Image 9: Screenshot related to LVM or storage configuration](T03/img/09.png)
+![Image 7: LDAP configuration step or command output](T04/img/07.png)
 
-![Image 10: Screenshot related to LVM or storage configuration](T03/img/10.png)
+![Image 8: LDAP configuration step or command output](T04/img/08.png)
 
-4. Creació del volum lògic (LV) 
-Ara ja podem crear volums lògics dins del VG. 
-En aquest cas, creem un LV de 200 MiB anomenat lv01 dins del grup volgrup: 
-sudo lvcreate -L 200M -n lvCB01 volgrup 
+Primer creem fitxer: 
  
-Si tornem a mirar la informació del grup, veurem que ja mostra una part de l’espai com a 
-utilitzat.
-
-
-![Image 11: Screenshot related to LVM or storage configuration](T03/img/11.png)
-
-![Image 12: Screenshot related to LVM or storage configuration](T03/img/12.png)
-
-I podem comprovar-lo amb: 
-sudo vgdisplay 
  
+Posem aquestes modificacions: 
  
-5. Formatació i muntatge del volum lògic 
-Igual que una partició normal, un LV necessita un sistema de fitxers per poder ser utilitzat. 
-Primer creem una carpeta per muntar-hi el LV: 
-sudo mkdir /mnt/lvm_dades
-
-
-![Image 13: Screenshot related to LVM or storage configuration](T03/img/13.png)
-
-![Image 14: Screenshot related to LVM or storage configuration](T03/img/14.png)
-
-Després el formategem en Ext4: 
-sudo mkfs.ext4 /dev/volgrup/lvCB01 
  
-I finalment el muntem: 
-sudo mount /dev/volgrup/lvCB01 /mnt/lvm_dades 
+Aquesta commanda permet afegir elements al directori: 
  
  
-Muntatge permanent 
-Si volem que el volum es munti automàticament cada vegada que arrenca el sistema, hem 
-d’editar /etc/fstab i afegir aquesta línia: 
-/dev/volgrup/lvCB01 /mnt/lvm_dades ext4 defaults 0 0 
-Després apliquem els canvis.
+Posem: 
+ 
+ 
+Afegim aquest entrada
+
 
+![Image 9: LDAP configuration step or command output](T04/img/09.png)
 
-![Image 15: Screenshot related to LVM or storage configuration](T03/img/15.png)
+![Image 10: LDAP configuration step or command output](T04/img/10.png)
 
-![Image 16: Screenshot related to LVM or storage configuration](T03/img/16.png)
+![Image 11: LDAP configuration step or command output](T04/img/11.png)
 
-![Image 17: Screenshot related to LVM or storage configuration](T03/img/17.png)
+![Image 12: LDAP configuration step or command output](T04/img/12.png)
 
-![Image 18: Screenshot related to LVM or storage configuration](T03/img/18.png)
+![Image 13: LDAP configuration step or command output](T04/img/13.png)
 
-6. Alta disponibilitat (mirror) 
-Per aconseguir redundància (semblant a RAID 1), podem crear volums lògics amb mirroring. 
-Primer cal eliminar el LV i el VG anterior: 
-●​ Desmuntar el LV: 
-sudo umount /mnt/lvm_dades​
+El busquem per assegurar 
  
  
+Fem ldap search al atribut 
  
-●​ Eliminar el volum lògic: 
-sudo lvremove /dev/volgrup/lvCB01 
  
+Fem aquesta comanda.  
  
+Instal·lem account maneger: 
  
-Esborrar la línia corresponent de /etc/fstab. 
  
-●​ Eliminar el grup de volums: 
-sudo vgremove volgrup
+ 
+ 
+Obrim el LDAP account manager; editar perfils de servidor > posar contrasenya (lam)
 
 
-![Image 19: Screenshot related to LVM or storage configuration](T03/img/19.png)
+![Image 14: LDAP configuration step or command output](T04/img/14.png)
 
-![Image 20: Screenshot related to LVM or storage configuration](T03/img/20.png)
+![Image 15: LDAP configuration step or command output](T04/img/15.png)
 
-![Image 21: Screenshot related to LVM or storage configuration](T03/img/21.png)
+![Image 16: LDAP configuration step or command output](T04/img/16.png)
 
-![Image 22: Screenshot related to LVM or storage configuration](T03/img/22.png)
+![Image 17: LDAP configuration step or command output](T04/img/17.png)
 
-![Image 23: Screenshot related to LVM or storage configuration](T03/img/23.png)
+![Image 18: LDAP configuration step or command output](T04/img/18.png)
 
-Ara creem un nou VG amb els dos discos: 
-sudo vgcreate lvm_mirror /dev/sdb /dev/sdc 
+Posem aquestes modificacions en el part de tipus de comptes actius (usuaris/grups). 
  
  
-I creem un volum amb mirroring: 
-sudo lvcreate -L 200M -m1 -n mirrorlv lvm_mirror 
  
-Podem comprovar la configuració amb: 
-sudo lvs -a -o +devices | grep mirror 
- 
-7. Instantànies (Snapshots) 
-Eliminem el volum lògic anterior i creem un de nou de 100 MiB: 
-sudo lvcreate -L 100M -n origin volgrup
-
+Creem un grup.
 
-![Image 24: Screenshot related to LVM or storage configuration](T03/img/24.png)
 
-![Image 25: Screenshot related to LVM or storage configuration](T03/img/25.png)
+![Image 19: LDAP configuration step or command output](T04/img/19.png)
 
-![Image 26: Screenshot related to LVM or storage configuration](T03/img/26.png)
+![Image 20: LDAP configuration step or command output](T04/img/20.png)
 
-![Image 27: Screenshot related to LVM or storage configuration](T03/img/27.png)
+![Image 21: LDAP configuration step or command output](T04/img/21.png)
 
-Després el formategem en Ext4: 
-sudo mkfs.ext4 /dev/volgrup/origin 
+Guardem i regresem. 
  
  
  
  
  
+Ara per tech 
  
  
-l formategem, el muntem a /mnt/lvm_dades i creem alguns arxius de prova: 
-fallocate -l 10M file01 
-... 
- 
- 
-Crear la snapshot 
-Fem una instantània amb: 
-lvcreate -L 100M -s -n lv_snapshot /dev/volgrup/origin
+Això és la llista de grups:
 
 
-![Image 28: Screenshot related to LVM or storage configuration](T03/img/28.png)
+![Image 22: LDAP configuration step or command output](T04/img/22.png)
 
-![Image 29: Screenshot related to LVM or storage configuration](T03/img/29.png)
+![Image 23: LDAP configuration step or command output](T04/img/23.png)
 
-![Image 30: Screenshot related to LVM or storage configuration](T03/img/30.png)
+![Image 24: LDAP configuration step or command output](T04/img/24.png)
 
-![Image 31: Screenshot related to LVM or storage configuration](T03/img/31.png)
+![Image 25: LDAP configuration step or command output](T04/img/25.png)
 
-![Image 32: Screenshot related to LVM or storage configuration](T03/img/32.png)
+![Image 26: LDAP configuration step or command output](T04/img/26.png)
 
-Muntar la snapshot 
-Creem una carpeta i la muntem: 
-sudo mkdir /mnt/snapshot 
-sudo mount /dev/volgrup/lv_snapshot /mnt/snapshot 
+![Image 27: LDAP configuration step or command output](T04/img/27.png)
+
+Anem a “nous usuaris” secció personal, i omplim cridencials. 
  
  
-Ara podem comparar continguts: si esborrem un fitxer nou al LV original, no apareixerà a la 
-carpeta, però si a la snapshot demostrant que s’ha capturat bé. 
  
+Aprop de la capaçela  “contrasenya”, i marquem la capçalera Unix i el guardem. 
  
-Recuperació des de la snapshot 
-Desmuntem: 
-sudo umount /mnt/snapshot 
-sudo umount /mnt/lvm_dades 
-I restaurem la snapshot, comprovant que desapareixen els fitxers creats posteriorment.
-
-
-![Image 33: Screenshot related to LVM or storage configuration](T03/img/33.png)
+Ara anem a l’apartat Unix i el guardem
 
-![Image 34: Screenshot related to LVM or storage configuration](T03/img/34.png)
 
-![Image 35: Screenshot related to LVM or storage configuration](T03/img/35.png)
+![Image 28: LDAP configuration step or command output](T04/img/28.png)
 
-![Image 36: Screenshot related to LVM or storage configuration](T03/img/36.png)
+![Image 29: LDAP configuration step or command output](T04/img/29.png)
 
-![Image 37: Screenshot related to LVM or storage configuration](T03/img/37.png)
+![Image 30: LDAP configuration step or command output](T04/img/30.png)
 
-![Image 38: Screenshot related to LVM or storage configuration](T03/img/38.png)
+![Image 31: LDAP configuration step or command output](T04/img/31.png)
 
-![Image 39: Screenshot related to LVM or storage configuration](T03/img/39.png)
-
-8. Escalabilitat (Ampliar i Reduir Volums Lògics) 
-Ampliar o reduir un volum lògic amb lvresize 
-L’ordre lvresize permet tant augmentar com disminuir la mida del volum. 
-Per exemple, per ampliar 1 GiB: 
-sudo lvresize -L 1000M /dev/volgrup/origin 
-Després tornem a redimensionar el sistema de fitxers: 
-sudo resize2fs /dev/volgrup/origin 
+Ara creem manager: 
+ 
  
  
-Ampliar un volum lògic amb lvextend 
-Ara ampliarem el volum lògic lv01 afegint-li 500 MiB més: 
-sudo lvextend -L 10M /dev/volgrup/origin 
-Un cop el volum ha estat ampliat, cal ampliar també el sistema de fitxers: 
-sudo resize2fs /dev/volgrup/origin 
+Al Unix. 
  
  
-Reduir un volum lògic amb lvreduce 
-Comprovem la integritat del sistema de fitxers: 
-sudo e2fsck -f /dev/volgrup/origin 
-I després reduïm el volum lògic amb: 
-sudo lvreduce -L 10M /dev/volgrup/origin
+Establim contrasenya i el guardem
 
 
-![Image 40: Screenshot related to LVM or storage configuration](T03/img/40.png)
+![Image 32: LDAP configuration step or command output](T04/img/32.png)
 
-![Image 41: Screenshot related to LVM or storage configuration](T03/img/41.png)
+![Image 33: LDAP configuration step or command output](T04/img/33.png)
 
-![Image 42: Screenshot related to LVM or storage configuration](T03/img/42.png)
+![Image 34: LDAP configuration step or command output](T04/img/34.png)
 
-Espais d'Emmagatzematge (Storage 
-Spaces) 
+![Image 35: LDAP configuration step or command output](T04/img/35.png)
+
+Aqui podem veure la llista d’usuaris: 
  
  
-Instal·lació de la màquina virtual Windows: 
+Ara al part client (ZORIN) editem el fitxer “/etc/hosts”. 
  
  
+Fem aquesta comanda per comprovar: 
  
-Creem tres discs de 10 GB cada per realitzar l’activitat.
-
-
-![Image 43: Screenshot related to LVM or storage configuration](T03/img/43.png)
-
-![Image 44: Screenshot related to LVM or storage configuration](T03/img/44.png)
-
-![Image 45: Screenshot related to LVM or storage configuration](T03/img/45.png)
-
-9. Espai d’emmagatzematge (Mirroring) 
  
+Fem aquesta comanda:. 
  
  
-Seleccionem tots els discs i creem el grup.
+Omplim el part que falta amb la nostra nom de server:
 
 
-![Image 46: Screenshot related to LVM or storage configuration](T03/img/46.png)
+![Image 36: LDAP configuration step or command output](T04/img/36.png)
 
-![Image 47: Screenshot related to LVM or storage configuration](T03/img/47.png)
+![Image 37: LDAP configuration step or command output](T04/img/37.png)
 
-Ja està creat.
+![Image 38: LDAP configuration step or command output](T04/img/38.png)
 
+![Image 39: LDAP configuration step or command output](T04/img/39.png)
 
-![Image 48: Screenshot related to LVM or storage configuration](T03/img/48.png)
+![Image 40: LDAP configuration step or command output](T04/img/40.png)
 
-Creem un arxiu de prova. 
- 
- 
- 
-Eliminem el disc numero 2:​
+![Image 41: LDAP configuration step or command output](T04/img/41.png)
 
+Fem més modificacions…
 
-![Image 49: Screenshot related to LVM or storage configuration](T03/img/49.png)
 
-![Image 50: Screenshot related to LVM or storage configuration](T03/img/50.png)
+![Image 42: LDAP configuration step or command output](T04/img/42.png)
 
-Per eliminar una resiliència, anem a espais d’emmagatzematge, espais 
-d’emmagatzematge i eliminem el que volem. 
- 
- 
- 
-Al pressionar “Eliminar”, ens sortirà una advertència per si volem revisar els arxius 
-que tenia el disc creat i finalment podrem borrar-lo.
+![Image 43: LDAP configuration step or command output](T04/img/43.png)
+
+![Image 44: LDAP configuration step or command output](T04/img/44.png)
 
+![Image 45: LDAP configuration step or command output](T04/img/45.png)
 
-![Image 51: Screenshot related to LVM or storage configuration](T03/img/51.png)
+![Image 46: LDAP configuration step or command output](T04/img/46.png)
 
-![Image 52: Screenshot related to LVM or storage configuration](T03/img/52.png)
+![Image 47: LDAP configuration step or command output](T04/img/47.png)
 
-10. Resiliència de Paritat (Parity) 
+Comprovem 
  
-Seleccionem tres discs de 10 GB. Creem el grup. 
  
-Posem el nom que volem, elegirem “Paritat” i posem la mida de disc que volguem. 
+Al part de client configurem el arxiu: 
  
-I ja tindrem creada la paritat.
-
-
-![Image 53: Screenshot related to LVM or storage configuration](T03/img/53.png)
+ 
+Editem l’arxiu i elimin la línea use_autho
 
-![Image 54: Screenshot related to LVM or storage configuration](T03/img/54.png)
 
-Després l’eliminem igual que s’ha mostrat anteriorment. Aquest procés és el mateix i 
-no varia. 
- 
- 
-Per què és millor en eficiència la paritat que el mirall? 
- 
-La resiliència de paritat és molt més eficient que el mirall perquè té tres discos en 
-comptes de dos, per això ofereix un 33% més d’emmagatzematge que si utilitzéssim 
-la resiliència de mirall, ja que hi ha dos discos útils en comptes d’un.
+![Image 48: LDAP configuration step or command output](T04/img/48.png)
 
+![Image 49: LDAP configuration step or command output](T04/img/49.png)
 
-![Image 55: Screenshot related to LVM or storage configuration](T03/img/55.png)
+![Image 50: LDAP configuration step or command output](T04/img/50.png)
 
-11. Resiliència de mirall triple 
- 
-Per el mirall triple, anyadirem cinc discos de 10 GB. 
- 
- 
- 
- 
- 
+Perfecte: 
  
  
+Fem un restart del servei: 
  
  
-Posarem el nom, la resiliència que vulguem i la mida que vulguem el grup.
-
-
-![Image 56: Screenshot related to LVM or storage configuration](T03/img/56.png)
-
-I ja el tenim creat. 
+El reniciem: 
  
  
- 
-Podem comprovar a l’explorador d’arxius els espais d’emmagatzematge creats.
-
+Mirem si tenim els clients.
 
-![Image 57: Screenshot related to LVM or storage configuration](T03/img/57.png)
 
-![Image 58: Screenshot related to LVM or storage configuration](T03/img/58.png)
-
-12. Estat dels discos des de la terminal 
- 
-Per poder veure el pool, executem la terminal i introduïm la seguent comanda: 
-​
-Get-StoragePool 
- 
- 
- 
-I per veure els discos virtuals creats, introduïm la seguent comanda: 
-​
-Get-VirtualDisk
+![Image 51: LDAP configuration step or command output](T04/img/51.png)
 
+![Image 52: LDAP configuration step or command output](T04/img/52.png)
 
-![Image 59: Screenshot related to LVM or storage configuration](T03/img/59.png)
+![Image 53: LDAP configuration step or command output](T04/img/53.png)
 
-![Image 60: Screenshot related to LVM or storage configuration](T03/img/60.png)
+![Image 54: LDAP configuration step or command output](T04/img/54.png)
 
-![Image 61: Screenshot related to LVM or storage configuration](T03/img/61.png)
+![Image 55: LDAP configuration step or command output](T04/img/55.png)
