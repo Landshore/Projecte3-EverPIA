@@ -203,27 +203,27 @@ Aquesta guia cobreix:
 
 Tots els fitxers de configuració i comandes s'executen amb els permisos adequats i es verifiquen a cada pas.
 ### 45. Configuració PAM per autenticació LDAP
-![Configuració PAM per autenticació LDAP](Projecte3-EverPIA/Tasques/T04/img/45.png)
+![Configuració PAM per autenticació LDAP](./img/45.png)
 *Configuració PAM per autenticació LDAP*
 
 ### 46. Edició de fitxer nsswitch.conf
-![Edició de fitxer nsswitch.conf](Projecte3-EverPIA/Tasques/T04/img/46.png)
+![Edició de fitxer nsswitch.conf](./img/46.png)
 *Edició de fitxer nsswitch.conf*
 
 ### 47. Configuració del mòdul PAM
-![Configuració del mòdul PAM](Projecte3-EverPIA/Tasques/T04/img/47.png)
+![Configuració del mòdul PAM](./img/47.png)
 *Configuració del mòdul PAM*
 
 ### 48. Afegir línies a pam.d/common-auth
-![Afegir línies a pam.d/common-auth](Projecte3-EverPIA/Tasques/T04/img/48.png)
+![Afegir línies a pam.d/common-auth](./img/48.png)
 *Afegir línies a pam.d/common-auth*
 
 ### 49. Afegir línies a pam.d/common-account
-![Afegir línies a pam.d/common-account](Projecte3-EverPIA/Tasques/T04/img/49.png)
+![Afegir línies a pam.d/common-account](./img/49.png)
 *Afegir línies a pam.d/common-account*
 
 ### 50. Afegir línies a pam.d/common-password
-![Afegir línies a pam.d/common-password](Projecte3-EverPIA/Tasques/T04/img/50.png)
+![Afegir línies a pam.d/common-password](./img/50.png)
 *Afegir línies a pam.d/common-password*
 
 ### 51. Afegir línies a pam.d/common-session
@@ -231,17 +231,17 @@ Tots els fitxers de configuració i comandes s'executen amb els permisos adequat
 *Afegir línies a pam.d/common-session*
 
 ### 52. Comprovació de configuració PAM
-![Comprovació de configuració PAM](Projecte3-EverPIA/Tasques/T04/img/52.png)
+![Comprovació de configuració PAM](./img/52.png)
 *Comprovació de configuració PAM*
 
 ### 53. Reiniciar serveis LDAP i PAM
-![Reiniciar serveis LDAP i PAM](Projecte3-EverPIA/Tasques/T04/img/53.png)
+![Reiniciar serveis LDAP i PAM](./img/53.png)
 *Reiniciar serveis LDAP i PAM*
 
 ### 54. Verificació final amb comandes ldapsearch
-![Verificació final amb comandes ldapsearch](Projecte3-EverPIA/Tasques/T04/img/54.png)
+![Verificació final amb comandes ldapsearch](./img/54.png)
 *Verificació final amb comandes ldapsearch*
 
 ### 55. Llista final d'usuaris i grups LDAP
-![Llista final d'usuaris i grups LDAP](Projecte3-EverPIA/Tasques/T04/img/55.png)
+![Llista final d'usuaris i grups LDAP](./img/55.png)
 *Llista final d'usuaris i grups LDAP*
