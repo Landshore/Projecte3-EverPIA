@@ -6,10 +6,10 @@
 
 Instal·lem un disc dur de 10 GB:
 
-![Configuració disc virtual](./img/i0)
+![Configuració disc virtual](./img/i0.jpg)
 *Diàleg de configuració del disc dur virtual*
 
-![Paràmetres del disc](./img/i1)
+![Paràmetres del disc](./img/i1.j)
 *Paràmetres de mida del disc*
 
 ### Inicialització del Disc
