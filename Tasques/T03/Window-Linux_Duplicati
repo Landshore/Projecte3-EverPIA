@@ -4,71 +4,71 @@
 
 Instal·lem un disc dur de 10 GB:
 
-![Disc dur 10GB](./img/i0.png)
+![Disc dur 10GB](./img/0.png)
 
 Inicialitzem el disc:
 
-![Inicialització del disc](./img/i1.png)
+![Inicialització del disc](./img/1.png)
 
 Amb clic dret creem un nou volum:
 
-![Crear nou volum](./img/i2.png)
+![Crear nou volum](./img/2.png)
 
 Utilitzem tot el volum:
 
-![Utilitzar tot el volum](./img/i3.png)
+![Utilitzar tot el volum](./img/3.png)
 
 Assignem la lletra E (pot ser qualsevol):
 
-![Assignar lletra E](./img/i4.png)
+![Assignar lletra E](./img/4.png)
 
 Format NTFS:
 
-![Format NTFS](./img/i5.png)
+![Format NTFS](./img/5.png)
 
 Ara tenim el nostre disc:
 
-![Disc configurat](./img/i6.png)
+![Disc configurat](./img/6.png)
 
 ## Instal·lació de Duplicati
 
 Instal·lem:
 
-![Instal·lació Duplicati](./img/i7.png)
+![Instal·lació Duplicati](./img/7.png)
 
 Escrivim això o obrim l'aplicació:
 
-![Obrir aplicació](./img/i8.png)
+![Obrir aplicació](./img/8.png)
 
 Ens demana una frase de contrasenya:
 
-![Contrasenya inicial](./img/i9.png)
+![Contrasenya inicial](./img/9.png)
 
 I estem, ara en el block de "backups" fes clic a sobre l'icona "Add+": i cliquem a "afegir una nova còpia de seguretat".
 
-![Afegir nova còpia](./img/i10.png)
+![Afegir nova còpia](./img/10.png)
 
 ## Sub-Part: Creant un Backup Local
 
 Posem el nom i la descripció per el nostre còpia de seguretat:
 
-![Nom i descripció backup local](./img/i11.png)
+![Nom i descripció backup local](./img/11.png)
 
 Per la destinació seleccionem el sistema de fitxers > segon disc:
 
-![Destinació segon disc](./img/i12.png)
+![Destinació segon disc](./img/12.png)
 
 Per l'origen posem C:/Users/Nom_d'usuari:
 
-![Origen usuari](./img/i13.png)
+![Origen usuari](./img/13.png)
 
 Per l'horari posem a true; automàticament fer còpies de seguretat, pròxima hora qualsevol, tornar a fer cada 1 hores i per últim cada dia.
 
-![Configuració horari](./img/i14.png)
+![Configuració horari](./img/14.png)
 
 Per l'últim pas ho deixem per defecte.
 
-![Pas final](./img/i15.png)
+![Pas final](./img/15.png)
 
 **Nota important:** Les còpies de seguretat estan xifrades amb una contrasenya que s'ha establert a Duplicati, tant per al backup local com per al backup en el núvol, sense requerir configuracions avançades addicionals.
 
@@ -80,33 +80,33 @@ Des de l'inici, afegirem una nova còpia de seguretat:
 
 Posem nom i frase de contrasenya per la còpia de seguretat:
 
-![Nom i contrasenya backup cloud](./img/i16.png)
+![Nom i contrasenya backup cloud](./img/16.png)
 
 Ara a la destinació per la còpia de seguretat busquem "Google Drive", cliquem al enllaç AuthID per deixar Duplicati accedir credencials, genererà un codi perquè pugui autoritzar a la nostra carpeta. Al camí de carpeta podem escriure un nom i el Duplicati ens en creara un de nou per nosaltres.
 
-![Configuració Google Drive](./img/i17.png)
+![Configuració Google Drive](./img/17.png)
 
 **Nota important:** Els fitxers de prova s'han creat prèviament a la carpeta Documents de l'usuari. Duplicati s'encarrega automàticament de pujar-los a Google Drive durant l'execució del backup, sense necessitat de copiar-los manualment al núvol.
 
 Per l'origen posem el nostre usuari on hi haurà els documents:
 
-![Origen documents](./img/i18.png)
+![Origen documents](./img/18.png)
 
 L'horari; el pròxim hora serà a les 18:00h:
 
-![Horari 18:00](./img/i19.png)
+![Horari 18:00](./img/19.png)
 
 Ara tenim les dues còpies de seguretat:
 
-![Dues còpies creades](./img/i20.png)
+![Dues còpies creades](./img/20.png)
 
 Part de Local:
 
-![Backup local](./img/i21.png)
+![Backup local](./img/21.png)
 
 Part de Google Drive:
 
-![Backup Google Drive](./img/i22.png)
+![Backup Google Drive](./img/22.png)
 
 ## Prova de Restauració
 
@@ -114,177 +114,177 @@ Part de Google Drive:
 
 Per fer la prova de restauració primer pujem imatges a /Documents, executem la còpia de seguretat i els eliminem:
 
-![Pujar i eliminar imatges](./img/i23.png)
+![Pujar i eliminar imatges](./img/23.png)
 
 Per assegurar que els hem eliminat anem a la papelera per eliminar-ho:
 
-![Eliminar de paperera](./img/i24.png)
+![Eliminar de paperera](./img/24.png)
 
 A RESTAURACIÓ LOCAL:
 
-![Restauració local](./img/i25.png)
+![Restauració local](./img/25.png)
 
 Fem seleccionem el fitxer que volem eliminar:
 
-![Seleccionar fitxer](./img/i26.png)
+![Seleccionar fitxer](./img/26.png)
 
 Posem a sobreescriure el fitxer i a la ubicació original:
 
-![Sobreescriure ubicació original](./img/i27.png)
+![Sobreescriure ubicació original](./img/27.png)
 
 Comprovem:
 
-![Verificació restauració](./img/i28.png)
+![Verificació restauració](./img/28.png)
 
 ### Sub-Part: Restauració Cloud
 
 Per fer la prova de restauració, les imatges que estan en el document, els hem de eliminar també des de la paperera:
 
-![Eliminar imatges cloud](./img/i29.png)
+![Eliminar imatges cloud](./img/29.png)
 
 A RESTAURACIÓ CLOUD:
 
-![Restauració cloud](./img/i30.png)
+![Restauració cloud](./img/30.png)
 
 Seleccionem quines carpetes volem restaurar:
 
-![Seleccionar carpetes](./img/i31.png)
+![Seleccionar carpetes](./img/31.png)
 
 Per la pas final podem seleccionar que rastauri en els fitxers previs i si volem sobreescriure o no.
 
-![Opcions finals restauració](./img/i32.png)
+![Opcions finals restauració](./img/32.png)
 
 Verifiquem:
 
-![Verificació cloud](./img/i33.png)
+![Verificació cloud](./img/33.png)
 
 ## PART LINUX
 
 L'apartat de Linux:
 
-![Inici Linux](./img/i34.png)
+![Inici Linux](./img/34.png)
 
 Verifiquem el 2n disc:
 
-![Verificar 2n disc](./img/i35.png)
+![Verificar 2n disc](./img/35.png)
 
 Creem una nova partició del tot:
 
-![Crear partició](./img/i36.png)
+![Crear partició](./img/36.png)
 
 El formatajem en .xfs:
 
-![Format XFS](./img/i37.png)
+![Format XFS](./img/37.png)
 
 Creem el punt de muntatge:
 
-![Punt de muntatge](./img/i38.png)
+![Punt de muntatge](./img/38.png)
 
 El montem:
 
-![Muntar disc](./img/i39.png)
+![Muntar disc](./img/39.png)
 
 Verifiquem:
 
-![Verificar muntatge](./img/i40.png)
+![Verificar muntatge](./img/40.png)
 
 Fem muntatge:
 
-![Configurar muntatge](./img/i41.png)
+![Configurar muntatge](./img/41.png)
 
 Afegim usuaris:
 
-![Afegir usuaris](./img/i42.png)
+![Afegir usuaris](./img/42.png)
 
 Creem 4 fitxers, cadascun de 10MB:
 
-![Crear fitxers 10MB](./img/i43.png)
+![Crear fitxers 10MB](./img/43.png)
 
 Verifiquem:
 
-![Verificar fitxers](./img/i44.png)
+![Verificar fitxers](./img/44.png)
 
 Generem contrasenya:
 
-![Generar contrasenya](./img/i45.png)
+![Generar contrasenya](./img/45.png)
 
 Fem una còpia de seguretat del /home a media backup:
 
-![Backup home](./img/i46.png)
+![Backup home](./img/46.png)
 
 Part de contrasenya:
 
-![Part contrasenya](./img/i47.png)
+![Part contrasenya](./img/47.png)
 
 Resultat final:
 
-![Resultat final backup](./img/i48.png)
+![Resultat final backup](./img/48.png)
 
 Comprovem l'estat de les còpies:
 
-![Estat còpies](./img/i49.png)
+![Estat còpies](./img/49.png)
 
 Esborrem l'arxiu:
 
-![Esborrar arxiu](./img/i50.png)
+![Esborrar arxiu](./img/50.png)
 
 Restaurem:
 
-![Restaurar arxiu](./img/i51.png)
+![Restaurar arxiu](./img/51.png)
 
 Verifiquem:
 
-![Verificar restauració](./img/i52.png)
+![Verificar restauració](./img/52.png)
 
 Creem un nou arxiu:
 
-![Crear nou arxiu](./img/i53.png)
+![Crear nou arxiu](./img/53.png)
 
 Fem una còpia incremental:
 
-![Còpia incremental](./img/i54.png)
+![Còpia incremental](./img/54.png)
 
 Comprovem:
 
-![Comprovar incremental](./img/i55.png)
+![Comprovar incremental](./img/55.png)
 
 Ara el desmontem:
 
-![Desmuntar](./img/i56.png)
+![Desmuntar](./img/56.png)
 
 Creem bashcript:
 
-![Crear bashscript](./img/i57.png)
+![Crear bashscript](./img/57.png)
 
 Fem això:
 
-![Configurar script](./img/i58.png)
+![Configurar script](./img/58.png)
 
 Fem `sudo crontab -e` i afegim aquesta línea:
 
-![Crontab configuració](./img/i59.png)
+![Crontab configuració](./img/59.png)
 
 Que és bàsicament; diumenge a les 23h, minut 0, * qualsevol dia al mes, * qualsevol mes, 0 cada diumenge. Al /usr/local/bin/fullbackup.sh executem el script. >> var/log/fullbackup.log 2>&1 es guarda la sortida en aquell log per el final 2>&1 es guarda també els errors de log.
 
 Comprovem:
 
-![Comprovar crontab](./img/i60.png)
+![Comprovar crontab](./img/60.png)
 
 Donem permisos:
 
-![Donar permisos](./img/i61.png)
+![Donar permisos](./img/61.png)
 
 Provem:
 
-![Provar script](./img/i62.png)
+![Provar script](./img/62.png)
 
 Afegim aquesta línea a l'arxiu:
 
-![Afegir línia](./img/i63.png)
+![Afegir línia](./img/63.png)
 
 Verifiquem:
 
-![Verificació final](./img/i64.png)
+![Verificació final](./img/64.png)
 
 La part " 0 23 * * 1-6 " = De dilluns (1) a dissabte (6) a les 23:00
 
