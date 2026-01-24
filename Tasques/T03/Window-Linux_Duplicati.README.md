@@ -6,27 +6,28 @@ Instal·lem un disc dur de 10 GB:
 
 ![Disc dur 10GB](./img/0.png)
 
+![Un segon disc afegida](./img/1.png)
+
+
 Inicialitzem el disc:
 
-![Inicialització del disc](./img/1.png)
+![inicialitzar el disc](./img/2.png)
 
-Amb clic dret creem un nou volum:
 
-![Crear nou volum](./img/2.png)
-
-Utilitzem tot el volum:
+Amb clic dret creem un nou volum: 
 
 ![Utilitzar tot el volum](./img/3.png)
 
-Assignem la lletra E (pot ser qualsevol):
+
+Utilitzem tot el volum: 
 
 ![Assignar lletra E](./img/4.png)
 
+Assignem la lletra E (pot ser qualsevol):
+
+![Assignar amb la lletra E.](./img/5.png)
+
 Format NTFS:
-
-![Format NTFS](./img/5.png)
-
-Ara tenim el nostre disc:
 
 ![Disc configurat](./img/6.png)
 
